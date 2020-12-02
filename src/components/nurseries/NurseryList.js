@@ -1,17 +1,14 @@
 import React, { useContext, useEffect } from "react"
-import { FlowerContext } from "../flowers/FlowerProvider"
 import { NurseryFlowerContext } from "../nurseryFlowers/nurseryFlowerProvider"
 import { Nursery } from "./Nursery"
 import { NurseryContext } from "./NurseryProvider"
 
 export const NurseryList = () => {
     const {nurseries, getNurseries} = useContext(NurseryContext)
-    const {flowers, getFlowers} = useContext(FlowerContext)
     const {nurseryFlowers, getNurseryFlowers} = useContext(NurseryFlowerContext)
 
     useEffect(() => {
-        getFlowers()
-        .then(getNurseryFlowers)
+        getNurseryFlowers()
         .then(getNurseries)
     }, [])
 
