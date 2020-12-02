@@ -7,8 +7,8 @@ import { NavBar } from "./nav/NavBar"
 export const ThornsAndRoses = () => (
     <>
         <Route >
-            <ApplicationViews />
             <NavBar />            
+            <ApplicationViews />
         </Route>
     </>
 )
