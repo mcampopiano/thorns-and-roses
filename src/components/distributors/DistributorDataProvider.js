@@ -2,7 +2,7 @@ import React, { useState } from "react"
 
 export const DistributorContext = React.createContext()
 
-export const DistributorProvider = () => {
+export const DistributorProvider = (props) => {
     const [distributors, setDistributors] = useState([])
 
     const getDistributors = () => {
