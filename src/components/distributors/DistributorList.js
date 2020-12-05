@@ -22,7 +22,6 @@ export const DistributorList = () => {
                 distributors.map(distributor => {
                     // debugger
                     const relatedNurseries = nurseryDistributors.filter(nd => nd.distributorId === distributor.id)
-                    const reducer = relatedNurseries.map(rn => )
                     const filteredFlowers = relatedNurseries.map(rn => {
                         return nurseryFlowers.filter(nf => nf.nurseryId === rn.id)
                     })
